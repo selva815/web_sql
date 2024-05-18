@@ -2,53 +2,30 @@
 <html>
   <head>
     <title>ICT log files db</title>
-    <style>
-      h1{
-        font-size: 50px;
-        font-family: Roboto
-        font-weight: nomal;
-        color: rgb(25, 250, 90);
-        text-align:center;
-        background-color: rgb(0, 0, 0);
-      }
-      #banner{
-        width: 100%;
-        height: 650px;
-        object-fit: cover;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <style>
+    #banner{
+      hehit: 360px;
+      width: 100%;
+      object-fit: cover;
         
-      }
-      h2{
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: nomal;
-        color: rgb(25, 200, 20);
-        text-align:center;  
-        background-color: rgb(0, 0, 0);
-      }
-      .bodytext{
-        font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
-        font-size: 20px;
-        font-weight: normal;
-        color: rgb(20, 20, 200)
-        text-align:center
-        
-      }
-      #container{
-        max-width: 720px;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+    }
+  </style>
+   </head>
   <body>
-    <div id="contsiner" >
-    <h1>ICT Test log files</h1>
-    <img id="banner" src="https://6a063daa-411d-4a83-9af3-0209083a116a-00-kdbohlxxa23t.pike.replit.dev/static/ele.jpg" height="320">
-    <h2>About</h2>
+    <div class="container">
+    <h1 class="text-center" >ICT Test log files</h1>
+    <img class= "img-fluid id="banner" src="https://6a063daa-411d-4a83-9af3-0209083a116a-00-kdbohlxxa23t.pike.replit.dev/static/ele.jpg" height="320">
+    <h2 class="text-center">About</h2>
     <p class="bodytext">The second story i want to do share with you
-    Is to do with the japanese professor.Who taught me a great lesson in management in the most insulting way as possible.
-    His name is professor yamaguchi, yamaguchi san we used to call him.
-    When i first met him i was incharge of Bajaj auto's R&D and engineering , we were working hard on pulsar.And he asked me a simple question and run it through your minds as i am telling you this story, he asked me what is your job?
-    I said to him yamaguchi san i am vice president products , and his excat words to me were.
+    Is to do with the japanese professor.Who taught me a great lesson in management in the most insulting way as possible.</p>
+      <br>
+    <p>His name is professor yamaguchi, yamaguchi san we used to call him.
+    When i first met him i was incharge of Bajaj auto's R&D and engineering , we were working hard on pulsar.And he asked me a simple question and run it through your minds as i am telling you this story, he asked me what is your job?</p>
+      <br>
+  <p>  I said to him yamaguchi san i am vice president products , and his excat words to me were.
     Stupid boy!, that is your designation , that is not your job, what is your job?
     So i said to him yamaguchi san , my job is to develop motorcyles.
     He said oh i see you are working on the drawing board or on the CAD station.
@@ -72,9 +49,13 @@
     I think if you follw these 4 words , i hope some of you will agree with me.
     We can acheive both prosperity and happiness.</p>
     <h2> Product Number</h2>
-    <p>TODO</p>
-    <div style="text-align:center;">
-    <button>Export Log</button>
+    <p>{% for items in product %}
+       {% include 'product.html' %}
+      {% endfor %}
+    
+    </p>
+    <div class="text-center">
+    <button class="btn btn-primary btn-lg">Export Log</button>
       <p> Copyright 2024</p>
       </div>
   </body>
